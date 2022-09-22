@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.010481496, g: 0.052960545, b: 0.15313256, a: 1}
+  m_IndirectSpecularColor: {r: 0.010486943, g: 0.05298245, b: 0.15319028, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -170,7 +170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e96ad8b0bc2be24896b1db7bde7823f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lpsDisplay: {fileID: 341371623}
+  lickUpgradeButton: {fileID: 1996297251}
+  autoLickButton: {fileID: 401493973}
+  autoUpgradeButton: {fileID: 845513482}
 --- !u!1 &13318359
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,6 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lickDisplay: {fileID: 13318359}
+  lpsDisplay: {fileID: 341371623}
 --- !u!1 &25243948
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,18 +485,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96052314}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.30828518, y: 0.30828518, z: 0.30828518}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 454601952}
-  m_Father: {fileID: 1764027490}
-  m_RootOrder: 2
+  m_Father: {fileID: 2070295026}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -53.025047}
   m_SizeDelta: {x: 250, y: 196}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &96052316
@@ -1289,7 +1292,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e96ad8b0bc2be24896b1db7bde7823f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lpsDisplay: {fileID: 341371623}
+  lickUpgradeButton: {fileID: 1996297251}
+  autoLickButton: {fileID: 401493973}
+  autoUpgradeButton: {fileID: 845513482}
 --- !u!1 &401493973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,8 +1306,9 @@ GameObject:
   - component: {fileID: 401493974}
   - component: {fileID: 401493976}
   - component: {fileID: 401493975}
+  - component: {fileID: 401493977}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: autoLickerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1425,6 +1431,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401493973}
   m_CullTransparentMesh: 1
+--- !u!114 &401493977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401493973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e96ad8b0bc2be24896b1db7bde7823f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lickUpgradeButton: {fileID: 1996297251}
+  autoLickButton: {fileID: 401493973}
+  autoUpgradeButton: {fileID: 845513482}
 --- !u!1 &416310580
 GameObject:
   m_ObjectHideFlags: 0
@@ -2294,7 +2315,7 @@ GameObject:
   - component: {fileID: 845513485}
   - component: {fileID: 845513484}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: autoLickerUpgradeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3524,6 +3545,7 @@ GameObject:
   - component: {fileID: 1706613582}
   - component: {fileID: 1706613581}
   - component: {fileID: 1706613580}
+  - component: {fileID: 1706613583}
   m_Layer: 5
   m_Name: autoUpgrade
   m_TagString: Untagged
@@ -3646,6 +3668,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706613578}
   m_CullTransparentMesh: 1
+--- !u!114 &1706613583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706613578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e96ad8b0bc2be24896b1db7bde7823f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lickUpgradeButton: {fileID: 1996297251}
+  autoLickButton: {fileID: 401493973}
+  autoUpgradeButton: {fileID: 845513482}
 --- !u!1 &1764027486
 GameObject:
   m_ObjectHideFlags: 0
@@ -3740,7 +3777,7 @@ RectTransform:
   m_Children:
   - {fileID: 13318360}
   - {fileID: 341371624}
-  - {fileID: 96052315}
+  - {fileID: 2070295026}
   - {fileID: 5091536}
   - {fileID: 476947140}
   - {fileID: 511529380}
@@ -4005,8 +4042,9 @@ GameObject:
   - component: {fileID: 1996297252}
   - component: {fileID: 1996297254}
   - component: {fileID: 1996297253}
+  - component: {fileID: 1996297255}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: lickUpgradeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4129,6 +4167,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996297251}
   m_CullTransparentMesh: 1
+--- !u!114 &1996297255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996297251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e96ad8b0bc2be24896b1db7bde7823f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lickUpgradeButton: {fileID: 1996297251}
+  autoLickButton: {fileID: 401493973}
+  autoUpgradeButton: {fileID: 845513482}
 --- !u!1 &2070295024
 GameObject:
   m_ObjectHideFlags: 0
@@ -4165,13 +4218,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070295024}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 53.025047, z: 90}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 171.99998, z: 0}
+  m_LocalScale: {x: 3.2437499, y: 3.2437499, z: 3.2437499}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Children:
+  - {fileID: 96052315}
+  m_Father: {fileID: 1764027490}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2082079163
 GameObject:
